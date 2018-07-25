@@ -31,7 +31,7 @@
         markList: [],
         agoDayHide: 0,
         futureDayHide:  '15181550670000' ,
-        isHideOtherday: false,
+        isHideOtherday: true,
 
         curtimeformat:"",
         curdaytem:""
@@ -128,17 +128,20 @@
       selhms: function(index,type){
         let that = this;
         if(type=='h'){
-          that.curhour=index>10?index:'0'+index;
+          that.curhour=index>=10?index:'0'+index;
         }
         if(type=='m'){
-          that.curmin=index>10?index:'0'+index;
+          that.curmin=index>=10?index:'0'+index;
         }
         if(type=='s'){
-          that.cursec=index>10?index:'0'+index;
+          that.cursec=index>=10?index:'0'+index;
         }
       },
       clickDay: function (item, index) {
         let that = this;
+        if(item.otherMonth){
+          return;
+        }
         if (!(this.isHideOtherday && item.nextDayShow) && !item.dayHide) {
           that.curdaytem=item.date;
           if(that.options.format.match(/-/g)){
