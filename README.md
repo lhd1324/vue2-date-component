@@ -24,4 +24,7 @@ npm run unit
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For a detailed explanation on how things work, check out the [guide](https://www.jianshu.com/p/82334ed7b8ed/) .
+
+应用接入参考指导地址： [https://www.jianshu.com/p/82334ed7b8ed/](https://www.jianshu.com/p/82334ed7b8ed/) .
+
